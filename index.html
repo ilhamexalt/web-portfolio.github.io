@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
@@ -31,7 +31,7 @@
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Project</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
             </div>
 
             <div class="home__img">
-                <img src="assets/img/img1.png" alt="">
+                <img src="assets/img/img1.JPG" alt="">
             </div>
         </section>
 
@@ -75,7 +75,8 @@
                 <div>
                     <h2 class="about__subtitle">I'm Ilham Maulana Wahyudin</h2>
                     <p class="about__text">Let's introduce myself, my name Ilham. I was born Pandeglang, 24 June 1998.
-                        I'm Live in Serang City. I am a Frontend Developer. </p>
+                        I'm Live in Serang City. I am a Frontend Developer. Apart from being a frontend, I can also
+                        design and edit videos. </p>
                 </div>
             </div>
         </section>
@@ -98,7 +99,7 @@
 
                         </div>
                         <div>
-                            <span class="skills__percentage">85%</span>
+                            <span class="skills__percentage">90%</span>
                         </div>
                     </div>
                     <div class="skills__data">
@@ -107,6 +108,30 @@
                             <span class="skills__name">CSS3</span>
                         </div>
                         <div class="skills__bar skills__css">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-product-hunt skills__icon'></i>
+                            <span class="skills__name">PHP</span>
+                        </div>
+                        <div class="skills__bar skills__php">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">75%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-react skills__icon'></i>
+                            <span class="skills__name">React</span>
+                        </div>
+                        <div class="skills__bar skills__js">
 
                         </div>
                         <div>
@@ -122,7 +147,7 @@
 
                         </div>
                         <div>
-                            <span class="skills__percentage">65%</span>
+                            <span class="skills__percentage">70%</span>
                         </div>
                     </div>
                     <div class="skills__data">
@@ -147,7 +172,7 @@
 
         <!--===== WORK =====-->
         <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
+            <h2 class="section-title">Project</h2>
             <div class="col">
                 <div class="work__container bd-grid">
                     <div class="work__img">
@@ -168,6 +193,15 @@
                     <div class="work__img">
                         <img src="assets/img/work7.jpg" alt="">
                     </div>
+                    <div class="work__img">
+                        <img src="assets/img/work8.png" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work9.png" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work10.png" alt="">
+                    </div>
                 </div>
             </div>
 
@@ -177,11 +211,11 @@
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
             <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="button" value="Sent" onclick="sweetAlert()" class="contact__button button">
+                <form name="contact-me" action="" class="contact__form">
+                    <input type="text" placeholder="Name" class="contact__input" name="nama">
+                    <input type="mail" placeholder="Email" class="contact__input" name="email">
+                    <textarea name="" id="" cols=" 0" rows="10" class="contact__input" name="pesan"></textarea>
+                    <input type="submit" value="Sent" onclick="sweetAlert()" class="contact__button button">
                 </form>
             </div>
         </section>
@@ -190,6 +224,7 @@
     <!--===== FOOTER =====-->
     <footer class="footer">
         <!-- mendadak wkwk -->
+        <i class='bx bxs-map bx-tada-hover'></i>
         <p class="footer__title" style="text-align: center;">Serang, 42116</p>
         <div class="footer__social">
             <a target="_BLANK" href="https://www.facebook.com/bariahsex" class="footer__icon"><i
@@ -220,6 +255,19 @@
             swal("Thank you!", "Message has been sent", "success");
         }
     </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxkVfWY0uSduTyklvzZ5gt24ALb447bm-brIebEKQ1y8XW9YIPvZx7PDBY3pZKSk93NVA/exec'
+        const form = document.forms['contact-me']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
 </body>
 
 </html>
