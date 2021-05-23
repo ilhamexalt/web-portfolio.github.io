@@ -67,12 +67,14 @@ body {
 
 h1,
 h2,
+h6,
 p {
   margin: 0;
 }
 
 p {
   text-align: justify;
+  font-style: var(--body-font);
 }
 
 ul {
@@ -344,23 +346,23 @@ img {
 }
 
 .skills__html {
-  width: 90%;
+  width: 85%;
 }
 
 .skills__css {
-  width: 85%;
+  width: 80%;
 }
 
 .skills__php {
-  width: 75%;
-}
-
-.skills__js {
   width: 70%;
 }
 
+.skills__js {
+  width: 65%;
+}
+
 .skills__ux {
-  width: 85%;
+  width: 65%;
 }
 
 .skills__img {
@@ -496,7 +498,7 @@ img {
   }
 
   .home__img {
-    width: 457px;
+    width: 450px;
     bottom: 15%;
   }
 
