@@ -47,7 +47,10 @@
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Ilham</span><br> Frontend Developer
+                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Ilham</span>
+                    <br>
+                    <span class="position">Frontend
+                        Developer </span>
                 </h1>
                 <a href="#" class="button">Contact</a>
             </div>
@@ -180,15 +183,6 @@
                         <img src="assets/img/work2.jpg" alt="">
                     </div>
                     <div class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </div>
-                    <div class="work__img">
                         <img src="assets/img/work6.jpg" alt="">
                     </div>
                     <div class="work__img">
@@ -202,6 +196,9 @@
                     </div>
                     <div class="work__img">
                         <img src="assets/img/work10.png" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work11.png" alt="">
                     </div>
                 </div>
             </div>
@@ -248,6 +245,10 @@
         </div>
         <a href="https://mail.google.com/mail/u/1/#inbox?compose=new" style="color: white;"> ilhamexalt33@gmail.com</a>
         <h6>PIPAW❤️</h6>
+        <!-- <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div> -->
     </footer>
 
 
@@ -261,6 +262,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
         function sweetAlert() {
             swal("Thank you!", "Message has been sent", "success");
@@ -294,8 +296,42 @@
                 })
                 .catch(error => console.error('Error!', error.message))
         })
-    </script>
 
+    </script>
+    <script>
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.home__title .position');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='position'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.home__data .home__title .line',
+                scaleY: [0, 1],
+                opacity: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 700
+            })
+            .add({
+                targets: '.home__data .home__title .line',
+                translateX: [0, document.querySelector('.home__data .home__title .position').getBoundingClientRect().width + 10],
+                easing: "easeOutExpo",
+                duration: 700,
+                delay: 100
+            }).add({
+                targets: '.home__data .home__title .position',
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=775',
+                delay: (el, i) => 34 * (i + 1)
+            }).add({
+                targets: '.home__data .home__title',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
 </body>
 
 </html>
