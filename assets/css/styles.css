@@ -1,5 +1,5 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -9,13 +9,14 @@
 
 /*===== Colors =====*/
 :root {
-  --first-color: #4070F4;
-  --second-color: #0E2431;
+  --first-color: #4070f4;
+  --second-color: #0e2431;
 }
 
 /*===== Font =====*/
 :root {
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Roboto Condensed", sans-serif;
+  --text-font: "Roboto Condensed", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
@@ -138,7 +139,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, .15);
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
 /*===== NAV =====*/
@@ -150,10 +151,8 @@ img {
   font-weight: var(--font-semi);
 }
 
-
 /* DESKTOP  */
 @media screen and (max-width: 768px) {
-
   p {
     text-align: center;
   }
@@ -166,7 +165,7 @@ img {
     height: 100%;
     padding: 2rem;
     background-color: var(--second-color);
-    transition: .5s;
+    transition: 0.5s;
   }
 }
 
@@ -192,7 +191,6 @@ img {
   left: 0;
   top: 2rem;
   background-color: var(--first-color);
-
 }
 
 .nav__logo {
@@ -221,8 +219,6 @@ img {
   right: 0;
 }
 
-
-
 /*===== HOME =====*/
 .home {
   height: calc(100vh - 3rem);
@@ -235,6 +231,7 @@ img {
 
 .home__title {
   font-size: var(--big-font-size);
+  font-style: var(--text-font);
   margin-bottom: var(--mb-5);
 }
 
@@ -270,15 +267,35 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: .75rem 2.5rem;
+  padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .button:hover {
-  box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  text-decoration: none;
 }
 
+.cv {
+  display: inline-block;
+  background-color: white;
+  color: var(--first-color);
+  padding: 0.75rem;
+  font-weight: var(--font-semi);
+}
+
+.cv:hover {
+  color: var(--first-color);
+  text-decoration: none;
+  transform: scale(1.1);
+  content: "";
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translate3d(-5%, 0, 0);
+  transform: translate3d(-5, 0, 0);
+}
 /* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
@@ -287,6 +304,13 @@ img {
 
 .about__subtitle {
   margin-bottom: var(--mb-2);
+  font-style: var(--text-font);
+  font-weight: 700;
+}
+.about__text {
+  text-align: justify;
+  font-style: var(--text-font);
+  font-weight: 400;
 }
 
 .about__img {
@@ -295,7 +319,7 @@ img {
 
 .about__img img {
   width: 200px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /* ===== SKILLS =====*/
@@ -310,6 +334,7 @@ img {
 
 .skills__text {
   margin-bottom: var(--mb-4);
+  font-style: var(--text-font);
 }
 
 .skills__data {
@@ -318,10 +343,10 @@ img {
   align-items: center;
   position: relative;
   font-weight: var(--font-semi);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: var(--mb-4);
-  border-radius: .5rem;
-  box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
 }
 
 .skills__icon {
@@ -340,8 +365,8 @@ img {
   left: 0;
   bottom: 0;
   background-color: var(--first-color);
-  height: .25rem;
-  border-radius: .5rem;
+  height: 0.25rem;
+  border-radius: 0.5rem;
   z-index: var(--z-back);
 }
 
@@ -349,24 +374,23 @@ img {
   width: 85%;
 }
 
-.skills__css {
-  width: 80%;
-}
-
 .skills__php {
-  width: 70%;
+  width: 75%;
 }
 
-.skills__js {
+.skills__react {
   width: 65%;
 }
 
 .skills__ux {
-  width: 65%;
+  width: 85%;
+}
+.skills__adobe {
+  width: 70%;
 }
 
 .skills__img {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /* ===== WORK =====*/
@@ -375,7 +399,7 @@ img {
 }
 
 .work__img {
-  box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
   /* border-radius: .5rem;
   Ga dipake */
   overflow: hidden;
@@ -388,6 +412,79 @@ img {
 
 .work__img img:hover {
   transform: scale(1.1);
+  /* line-height: 1.68em;
+  color: #fff;
+  transition: all 0.5s ease-in-out !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+  opacity: 0; */
+}
+
+.after__hover {
+  width: 100%;
+  height: 98%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  background: var(--second-color);
+}
+.after__hover .__delay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 80px 50px;
+}
+
+.after__hover img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 20px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.after__hover:hover img {
+  opacity: 0;
+  filter: alpha(opacity=80);
+  transform: scale(1.2);
+}
+
+.after__hover a,
+.after__hover p {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.after__hover:hover a,
+.after__hover:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* ===== CONTACT =====*/
@@ -396,7 +493,7 @@ img {
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1.5px solid var(--second-color);
   outline: none;
   margin-bottom: var(--mb-4);
@@ -432,7 +529,7 @@ img {
 .footer__icon {
   font-size: 1.5rem;
   color: #fff;
-  margin: 0 var(--mb-2)
+  margin: 0 var(--mb-2);
 }
 /* CUBE GA DIPAKE */
 /* .spinner {
