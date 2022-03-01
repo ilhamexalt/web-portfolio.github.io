@@ -400,8 +400,6 @@ img {
 
 .work__img {
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
-  /* border-radius: .5rem;
-  Ga dipake */
   overflow: hidden;
 }
 
@@ -412,26 +410,11 @@ img {
 
 .work__img img:hover {
   transform: scale(1.1);
-  /* line-height: 1.68em;
-  color: #fff;
-  transition: all 0.5s ease-in-out !important;
-  font-family: "Poppins", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  overflow: hidden;
-  padding: 0.5em 0;
-  background-color: transparent;
-  opacity: 0; */
 }
-
+/* MEMBUAT KOTAK HITAM MUNCUL */
 .after__hover {
   width: 100%;
-  height: 98%;
+  height: 100%;
   float: left;
   overflow: hidden;
   position: relative;
@@ -440,13 +423,16 @@ img {
   background: var(--second-color);
 }
 .after__hover .__delay {
+  padding: 40px;
   width: 100%;
   height: 100%;
   position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
-  padding: 80px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .after__hover img {
