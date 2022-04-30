@@ -1,0 +1,24 @@
+{
+  "name": "web-portfolio.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilhamexalt/web-portfolio.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilhamexalt/web-portfolio.github.io/issues"
+  },
+  "homepage": "https://github.com/ilhamexalt/web-portfolio.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
