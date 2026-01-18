@@ -1,5 +1,5 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"); */
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -9,14 +9,14 @@
 
 /*===== Colors =====*/
 :root {
-  --first-color: #4070f4;
-  --second-color: #0e2431;
+  --first-color: #5361FF;
+  --second-color: #0E2431;
 }
 
 /*===== Font =====*/
 :root {
-  --body-font: "Roboto Condensed", sans-serif;
-  --text-font: "Roboto Condensed", sans-serif;
+  --body-font: "Poppins", sans-serif;
+  --text-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
@@ -347,6 +347,12 @@ img {
   margin-bottom: var(--mb-4);
   border-radius: 0.5rem;
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  transition: .3s;
+}
+
+.skills__data:hover {
+    box-shadow: 0 5px 20px rgba(14, 36, 49, 0.1);
+    transform: translateY(-5px);
 }
 
 .skills__icon {
@@ -401,6 +407,13 @@ img {
 .work__img {
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
   overflow: hidden;
+  border-radius: 0.5rem;
+  transition: .3s;
+}
+
+.work__img:hover {
+    box-shadow: 0 8px 30px rgba(14, 36, 49, 0.15);
+    transform: translateY(-5px);
 }
 
 .work__img img {
